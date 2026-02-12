@@ -1,8 +1,8 @@
 # httpx-curl-cffi
 
-[httpx](https://github.com/encode/httpx) transport for
-[curl_cffi](https://github.com/lexiforest/curl_cffi) -
-python binding for [curl-impersonate fork](https://github.com/lexiforest/curl-impersonate)
+[httpx](https://github.com/Unity-Billal-mesloub/httpx) transport for
+[curl_cffi](https://github.com/Unity-Billal-mesloub/curl_cffi) -
+python binding for [curl-impersonate fork](https://github.com/Unity-Billal-mesloub/curl-impersonate)
 
 Unlike other pure python http clients
 like `httpx` (with **native** transport) or `requests`,
@@ -78,8 +78,8 @@ client = httpx.Client(  # or httpx.AsyncClient
 * `httpx.Timeout.pool` is ignored, should be implemented in `curl_cffi`
 * Simultaneous asynchronous requests requires to set
   `CurlTransport.curl_options={CurlOpt.FRESH_CONNECT: True}`
-  <https://github.com/lexiforest/curl_cffi/issues/302>
-  <https://github.com/lexiforest/curl_cffi/issues/319>
+  <https://github.com/Unity-Billal-mesloub/curl_cffi/issues>
+  <https://github.com/Unity-Billal-mesloub/curl_cffi/issues>
 
 ## Known limitations
 
@@ -92,11 +92,11 @@ client = httpx.Client(  # or httpx.AsyncClient
   to make `proxy` argument have complete control on proxy usage,
   but may have effect in TLS configuration
   (but may not be used by `curl-impersonate` fork, idk)
-  <https://github.com/lexiforest/curl_cffi/issues/345>
+  <https://github.com/Unity-Billal-mesloub/curl_cffi/issues>
 * `httpx.Response.request.headers` isn't updated with default
   `curl-impersonate` headers,
   which can be unexpected on `CurlTransport.default_headers=True`
-  <https://github.com/lexiforest/curl_cffi/issues/368>
+  <https://github.com/Unity-Billal-mesloub/curl_cffi/issues>
 
 * `CurlTransport.cert` argument isn't compatible
   with (deprecated) `httpx._types.CertTypes` -
